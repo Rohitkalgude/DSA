@@ -2,7 +2,7 @@ package ArrayMatrixLogic;
 
 import java.util.Scanner;
 
-public class MatrixAddition {
+public class MatrixMultiplication {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -10,36 +10,36 @@ public class MatrixAddition {
         System.out.println("Enter the row");
         int rows = sc.nextInt();
         System.out.println("Enter the columns");
-        int cols = sc.nextInt();
+        int columns = sc.nextInt();
 
 
-        int [][] matrixA = new int[rows][cols];
-        int [][] matrixB = new int[rows][cols];
-        int [][] result = new int[rows][cols];
+        int [][]matrixA = new int [rows][columns];
+        int [][]matrixB = new int [rows][columns];
+        int [][]result = new int [rows][columns];
 
 
-        //matrix A
+
+        //matrixA
         System.out.println("Enter the matrixA");
         for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
+            for (int j=0; j<columns; j++){
                 matrixA[i][j] = sc.nextInt();
             }
         }
 
-
-        //matrix B
+        //matrixB
         System.out.println("Enter the matrixB");
         for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
+            for (int j=0; j<columns; j++){
                 matrixB[i][j] = sc.nextInt();
             }
         }
 
 
         //first matrixA
-        System.out.println("First the matrixA");
+        System.out.println("Enter the matrixA");
         for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
+            for (int j=0; j<columns; j++){
                 System.out.print(matrixA[i][j] +" ");
             }
             System.out.println();
@@ -47,31 +47,31 @@ public class MatrixAddition {
 
 
         //second matrixB
-        System.out.println("Second the matrixB");
+        System.out.println("Enter the matrixB");
         for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
+            for (int j=0; j<columns; j++){
                 System.out.print(matrixB[i][j] +" ");
             }
             System.out.println();
         }
 
 
-        //Addition
+        //Multiplication
+        System.out.println("result Multiplication");
         for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
-                result[i][j] = matrixA[i][j] + matrixB[i][j];
+            for (int j=0; j<columns; j++){
+                result[i][j] = matrixA[i][j] * matrixB[i][j];
             }
         }
 
 
-        //Addition result
-        System.out.println("Result Addition");
+        //result
+        System.out.println("final answer Multiplication");
         for (int i=0; i<rows; i++){
-            for (int j=0; j<cols; j++){
-                System.out.print(result[i][j] + " ");
+            for (int j=0; j<columns; j++){
+                System.out.print(result[i][j] +" ");
             }
             System.out.println();
         }
-
     }
 }
