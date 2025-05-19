@@ -1,4 +1,4 @@
-package Pattern;
+package Basic;
 
 public class largest {
     public static void main(String[] args) {

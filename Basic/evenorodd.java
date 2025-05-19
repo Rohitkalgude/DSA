@@ -1,4 +1,4 @@
-package Pattern;
+package Basic;
 
 public class evenorodd {
     public static void main(String[] args) {
