@@ -1,27 +1,35 @@
 package Day8;
 
+import java.util.Arrays;
+
 public class SumPairclosest {
     public static int sum(int[] arr, int target) {
 
+        Arrays.sort(arr);
+
         int start = 0;
         int end = arr.length-1;
-        int maxandmin = Integer.MAX_VALUE;
+        int closetsum = arr[start] + arr[end];
+        int mindiff = Math.abs(closetsum - target);
 
         while (start < end){
-            int sum = arr[start] + arr[end];
-            int diff = Math.abs(sum - target);
 
-            if (sum == target){
-                System.out.println("[]" +sum);
+            int sum = arr[start] + arr[end];
+            int currentdiff = Math.abs(sum - target);
+
+            if (currentdiff < mindiff){
+                mindiff = currentdiff;
+                closetsum = currentdiff;
             }
-            else if (start > end) {
+            else if (closetsum < target) {
                 start++;
             }
-            else if (start < end) {
+            else {
                 end--;
             }
         }
-        return maxandmin;
+        System.out.println("Closest Sum" +closetsum);
+        return closetsum;
     }
 
 

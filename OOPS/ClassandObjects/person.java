@@ -1,4 +1,4 @@
-package OOPS;
+package OOPS.ClassandObjects;
 
 public class person {
 
