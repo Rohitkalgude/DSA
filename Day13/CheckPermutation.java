@@ -16,6 +16,10 @@ public class CheckPermutation {
             windows[txt.charAt(i) - 'a']++;
         }
 
+        if (Arrays.equals(patFreq, windows)){
+            return true;
+        }
+
         // Slide the window over txt
         for (int i=m; i<n; i++){
             windows[txt.charAt(i-m) - 'a']--;
